@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.two.emergencylending.view.Topbar
+        android:id="@+id/contact_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        custom:iv_left="@drawable/back"
+        custom:leftBackground="@drawable/button_bg"
+        custom:leftTextColor="@color/black"
+        custom:leftTextSize="@dimen/title_left_size"
+        custom:mytitle="申请借款"
+        custom:mytitleTextColor="@color/black"
+        custom:mytitleTextSize="@dimen/title_size"
+        custom:rightBackground="@drawable/button_bg"
+        custom:rightTextColor="@color/black"
+        custom:rightTextSize="@dimen/title_right_size" />
+
+    <RelativeLayout
+        android:id="@+id/rl_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignLeft="@+id/ll_process"
+            android:layout_alignRight="@+id/ll_process"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/dark_grey" />
+
+        <LinearLayout
+            android:id="@+id/ll_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="个人资料" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="单位信息" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="联系人" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="信息认证" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="结束申请" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_process"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

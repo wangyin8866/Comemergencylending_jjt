@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.two.emergencylending.view.Topbar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        custom:iv_left="@drawable/back"
+        custom:leftBackground="@drawable/button_bg"
+        custom:leftTextColor="@color/black"
+        custom:leftTextSize="@dimen/title_left_size"
+        custom:mytitle="订单状态"
+        custom:mytitleTextColor="@color/black"
+        custom:mytitleTextSize="@dimen/title_size"
+        custom:rightBackground="@drawable/button_bg"
+        custom:rightTextColor="@color/black"
+        custom:rightTextSize="@dimen/title_right_size" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/img_cartoon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="审批中"
+            android:textColor="@color/remind_text"
+            android:textSize="21dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/go_icon_hw"
+                    android:layout_height="@dimen/go_icon_hw"
+                    android:src="@drawable/wancheng" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="完善信息" />
+
+                <TextView
+                    android:id="@+id/perfect_info_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text=""
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/go_icon_hw"
+                    android:layout_height="@dimen/go_icon_hw"
+                    android:src="@drawable/wancheng" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="认证信息" />
+
+                <TextView
+                    android:id="@+id/auth_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text=""
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/bg_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/go_icon_hw"
+                    android:layout_height="@dimen/go_icon_hw"
+                    android:src="@drawable/jinxingzhong" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+
+                    android:text="审批中    " />
+
+                <TextView
+                    android:id="@+id/approve_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:text=""
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/text_item_dark_grey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/weiwancheng" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="申请结束" />
+
+                <TextView
+                    android:id="@+id/end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:text=""
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

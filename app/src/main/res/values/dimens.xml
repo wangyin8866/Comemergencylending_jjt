@@ -1,0 +1,30 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="dimen_28">17.5000px</dimen>
+    <dimen name="dimen_30w">20.0000px</dimen>
+    <dimen name="dimen_90">56.2500px</dimen>
+
+    <dimen name="title_height">55dp</dimen>
+    <dimen name="title_size">6sp</dimen>
+    <dimen name="title_left_size">4.5sp</dimen>
+    <dimen name="title_right_size">3.5sp</dimen>
+    <dimen name="padding_fifteen">15.0dip</dimen>
+    <dimen name="moxie_mailimport_textAppearanceLarge17">17sp</dimen>
+    <dimen name="moxie_mailimport_textAppearanceLarge18">18sp</dimen>
+    <dimen name="seekbar_progress_height">3.0dip</dimen>
+    <dimen name="seekbar_thumb_offset">6.0dip</dimen>
+    <declare-styleable name="DashedCircularProgress">
+        <attr name="external_color" format="color" />
+        <attr name="base_color" format="color" />
+        <attr name="progress_color" format="color" />
+        <attr name="max" format="float" />
+        <attr name="min" format="float" />
+        <attr name="duration" format="integer" />
+        <attr name="progress_stroke_width" format="integer" />
+    </declare-styleable>
+    <dimen name="set_hegi">55dp</dimen>
+    <dimen name="go_icon_hw">20dp</dimen>
+</resources>

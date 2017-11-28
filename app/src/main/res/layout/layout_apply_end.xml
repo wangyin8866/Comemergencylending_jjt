@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+    <ImageView
+        android:id="@+id/iv_finish_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_afinish"
+      
+        />
+        <TextView
+            android:id="@+id/tv_apply_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:text="申请提交成功"
+            android:textSize="20dp"
+            android:textColor="@color/apply_end_color"
+            android:layout_marginTop="15dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="10dp"
+            android:textColor="@color/name"
+            android:text="审核通过后会有短信通知，请耐心等候！"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/loan_bg"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:src="@drawable/icon_tips"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:textSize="14sp"
+            android:textColor="@color/register_hint"
+            android:text="防骗提醒:  我们在受理过程中不收取您任何费用!"
+            />
+    </LinearLayout>
+   
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line">
+
+    <com.two.emergencylending.view.Topbar
+        android:id="@+id/earn_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/transparent"
+        custom:iv_left="@drawable/back"
+        custom:leftBackground="@drawable/button_bg"
+        custom:leftTextColor="@color/black"
+        custom:leftTextSize="@dimen/title_left_size"
+        custom:mytitle="赚取奖金"
+        custom:mytitleTextColor="@color/main_bg"
+        custom:mytitleTextSize="@dimen/title_size"
+        custom:rightBackground="@drawable/button_bg"
+        custom:rightTextColor="@color/black"
+        custom:rightTextSize="@dimen/title_right_size" />
+
+    <LinearLayout
+        android:id="@+id/earn_method"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/earn_topbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/earn_abonus_method"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/earn_abonus_method_one"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/earn_abonus_method_two" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/my_invite_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/earn_method"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="我的邀请码:3226666"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/share_friend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_invite_code"
+        android:layout_centerHorizontal="true"
+        android:text="@string/share_friend"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/share_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_friend"
+        android:src="@drawable/gou" />
+
+    <ImageView
+        android:id="@+id/share_wx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_friend"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/gou" />
+
+    <ImageView
+        android:id="@+id/share_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/share_friend"
+        android:src="@drawable/gou" />
+
+    <ImageView
+        android:id="@+id/share_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_sms"
+        android:src="@drawable/gou" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_mail"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/methods_and_rules"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/methods_and_rules_one"
+            android:textSize="10dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/methods_and_rules_two" />
+    </LinearLayout>
+
+</RelativeLayout>

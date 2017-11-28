@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/loan_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_idcard_fornt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/idcard_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/idcard_front" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-18dp"
+                        android:text="身份证正面" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_idcard_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/idcard_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/idcard_back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-18dp"
+                        android:text="身份证背面" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_selfie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_self"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/idcard_bg"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/idcard_bahold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-18dp"
+                        android:text="手持身份证" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/loan_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity=""
+                    android:minEms="6"
+                    android:text="姓名"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/et_personal_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="请输入姓名"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="身份证"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/et_peronal_idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="请输入身份证号"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/loan_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_education_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="学历"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_education"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/education_type"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_marriage"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minEms="6"
+                    android:text="婚姻状况"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_marriage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_marriage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_livestatu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minEms="6"
+                    android:text="居住状况"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_livestatu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_livestatu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/loan_bg" />
+
+            <LinearLayout
+                android:id="@+id/ll_huijiAddress_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="户籍地址"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请选择户籍地址"
+                    android:inputType="text"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_huijiaddress"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="详细地址"
+                    android:textColor="@color/name"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/ed_detailed_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="户籍详细地址"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_residence_address_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="居住地"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_residence_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请选择居住地址"
+                    android:inputType="text"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_residence_address"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_location" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="详细地址"
+                    android:textColor="@color/name"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/ed_residence_detailed_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="居住详细地址"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_job_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="工作地址"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_job_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请选择工作地址"
+                    android:inputType="text"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_job_address"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="详细地址"
+                    android:textColor="@color/name"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/ed_job_detailed_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="工作详细地址"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/loan_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="银行卡号"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_bankno"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入银行卡号"
+                    android:inputType="number"
+                    android:maxLength="22"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_camera"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_openBank"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minEms="6"
+                    android:text="开户银行"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_openbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请选择开户银行"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_openbank"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minEms="6"
+                    android:text="手机号"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/ed_pesonal_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请填写手机号码"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_question_bank"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_q" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/register_line" />
+
+            <Button
+                android:id="@+id/btn_personal_sava"
+                style="@style/button_orange"
+                android:text="下一步" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/amount_item_bg"
+    android:gravity="center_vertical"
+    android:layout_margin="6dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/icon_identity1" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="10dp"
+        android:layout_toRightOf="@id/iv_icon"
+        android:text="本人在职员工,我有养老保险或积金连续缴费记录>=6个月"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/cb_check"
+        style="@style/amount_CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:checked="true" />
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pop_layout"
+        android:gravity="center_horizontal"
+        android:background="@color/backgroud"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/data_picker_cancle"
+            android:layout_width="60dp"
+            android:layout_height="30dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/backgroud"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/data_picker_complete"
+            android:layout_width="60dp"
+            android:layout_height="30dip"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:background="@color/backgroud"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="确定"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:typeface="normal" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/timepicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="#E9E9E9"
+        android:orientation="horizontal"
+        >
+
+        <com.two.emergencylending.widget.WheelView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.two.emergencylending.widget.WheelView
+            android:id="@+id/month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+
+        <com.two.emergencylending.widget.WheelView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1" />
+    </LinearLayout>
+
+</LinearLayout>

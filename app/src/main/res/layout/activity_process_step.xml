@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_alignLeft="@+id/ll_process"
+            android:layout_alignRight="@+id/ll_process"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/dark_grey" />
+
+        <LinearLayout
+            android:id="@+id/ll_process"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="个人资料" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="单位信息" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="联系人" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="信息认证" />
+
+            <Button
+                style="@style/process"
+                android:drawableTop="@drawable/btn_home_selector"
+                android:text="结束申请" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

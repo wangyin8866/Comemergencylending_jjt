@@ -1,0 +1,297 @@
+apply plugin: 'com.android.application'
+apply plugin: 'bugly'
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.3'
+
+    defaultConfig {
+        applicationId "com.zyjr.emergencylending"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 30
+        versionName "1.29"
+        // dex突破65535的限制
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        // 默认是umeng的渠道
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+//        ndk {
+//            //设置支持的SO库架构
+//            abiFilters 'arm64-v8a','armeabi', "armeabi-v7a",'mips','mips64', "x86", "x86_64"
+//        }
+    }
+    dexOptions {
+        dexInProcess true
+        preDexLibraries true
+        javaMaxHeapSize "4g"//越大越好
+        incremental true
+    }
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+
+    bugly {
+        appId = '4d0f2343fa' // 注册时分配的App ID
+        appKey = '4e0f5d28-492a-465d-b8ed-fc41428c5f67' // 注册时分配的App Key
+        appPackage = 'com.two.emergencylending'// 包名
+        appVersion = '1.0.0'// 版本名
+        debug = true // 是否开启调试
+    }
+    buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+//            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            debuggable true
+            //混淆
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            // signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "Jijietong_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'chinazyjr'
+            keyPassword '1qaz2wsx'
+            storePassword '1qaz2wsx'
+            storeFile file('E:/app_key/jjt_new/chinazyjr.jks')
+        }
+        release {
+            keyAlias 'chinazyjr'
+            keyPassword '1qaz2wsx'
+            storePassword '1qaz2wsx'
+            storeFile file('E:/app_key/jjt_new/chinazyjr.jks')
+
+        }
+    }
+    productFlavors {
+        W_JJTGW {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_JJTGW"]
+        }
+
+//        W_360 {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_360"]
+//        }
+//
+//        W_TXYYB {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_TXYYB"]
+//        }
+//
+//        W_91 {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_91"]
+//        }
+//        W_OPPO {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_OPPO"]
+//        }
+//        W_AZSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_AZSC"]
+//        }
+//        W_HWYYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_HWYYSC"]
+//        }
+//        W_XMYYSD {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_XMYYSD"]
+//        }
+//
+//        W_BDSJZS {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_BDSJZS"]
+//        }
+//        W_FLYME {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_FLYME"]
+//        }
+//        W_ALFFPT {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_ALFFPT"]
+//        }
+//        W_VIVO {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_VIVO"]
+//        }
+//        W_AZ2SC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_AZ2SC"]
+//        }
+//        W_SGSJZS {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_SGSJZS"]
+//        }
+//        W_MMY {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_MMY"]
+//        }
+//        W_CZYYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_CZYYSC"]
+//        }
+
+//        W_WDJ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_WDJ"]
+//        }
+
+//        W_KC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_KC"]
+//        }
+
+//        W_LENOVO {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_LENOVO"]
+//        }
+//        W_JLYYH {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_JLYYH"]
+//        }
+
+//        W_NDW {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_NDW"]
+//        }
+
+//        W_PPZS {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_PPZS"]
+//        }
+//
+
+//
+//        W_XLWB {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_XLWB"]
+//        }
+
+//        W_WSD {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_WSD"]
+//        }
+//        W_YYH {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_YYH"]
+//        }
+//        W_SGSJZS {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_SGSJZS"]
+//        }
+//        W_ZGYDYYSD {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_ZGYDYYSD"]
+//        }
+//        W_DXTYKJ {
+//           manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_DXTYKJ"]
+//        }
+
+//        W_AZY {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_AZY"]
+//        }
+//        W_AZZJ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_AZZJ"]
+//        }
+//       W_AFW {
+//           manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_AFW"]
+//       }
+//        W_PC6 {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_PC6"]
+//        }
+//        W_LBYYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_LBYYSC"]
+//        }
+//        W_KAYYSC {
+//            signingConfig signingConfigs.release
+//        }
+//        W_NDYYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_NDYYSC"]
+//        }
+//        W_45YYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_45YYSC"]
+//        }
+//        W_2345YYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_2345YYSC"]
+//        }
+//        W_YYYYSC {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_YYYYSC"]
+//        }
+//        W_HJRJY {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_HJRJY"]
+//        }
+//        W_XZZJ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_XZZJ"]
+//        }
+//        W_TKXZ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_TKXZ"]
+//        }
+//        W_XXRJY {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_XXRJY"]
+//        }
+//        W_DPXZ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_DPXZ"]
+//        }
+//        W_PC6XZ {
+//           manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_PC6XZ"]
+//        }
+//        W_TYXZZ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_TYXZZ"]
+//        }
+//        W_FFXZZ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_FFXZZ"]
+//        }
+//        W_LDXZZ {
+//            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "W_LDXZZ"]
+//        }
+
+
+    }
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+
+}
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.github.promeg:tinypinyin:1.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile project(':Refresh')
+    compile(name: 'moxie-client-1.1.4', ext: 'aar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jph.takephoto:takephoto_library:4.0.3'
+    compile 'com.mylhyl:acp:1.1.7'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile project(path: ':bankCardLib')
+    compile project(':bankCardLib')
+    compile 'com.android.support:design:26.0.0-alpha1'
+    //腾讯bugly
+    compile 'com.tencent.bugly:crashreport:2.1.9'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:3.0'
+    //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+    //添加rxjava
+    // compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    // compile 'io.reactivex.rxjava2:rxjava:2.1.1'
+    compile project(':commonLibrary')
+    compile project(':IDCardLib')
+    compile project(':livenesslib')
+}

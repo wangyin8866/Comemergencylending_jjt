@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.two.emergencylending.view.Topbar
+        android:id="@+id/job_information_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        custom:iv_left="@drawable/back"
+        custom:leftBackground="@drawable/button_bg"
+        custom:leftTextColor="@color/black"
+        custom:leftTextSize="@dimen/title_left_size"
+        custom:mytitle="工作信息"
+        custom:mytitleTextColor="@color/black"
+        custom:mytitleTextSize="@dimen/title_size"
+        custom:rightBackground="@drawable/button_bg"
+        custom:rightTextColor="@color/black"
+        custom:rightTextSize="@dimen/title_right_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/loan_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/contacts_add"
+            android:textColor="#999999"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_profession_type"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    style="@style/spacestyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableLeft="@drawable/start"
+                    android:text="职业"/>
+
+                <RelativeLayout
+                    android:id="@+id/jobinformation_company_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:id="@+id/profession_type"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_nonework"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_salary_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="月薪"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobinformation_company_salary"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/salary"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/salary_type"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"/>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_pay_day_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="发薪日"
+                        android:textColor="@color/name"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobinformation_company_pay_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/pay_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/education_type"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/pay_day_type"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"/>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_pay_channel_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="发薪渠道"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobinformation_company_pay_channel"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/pay_channel"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/education_type"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/pay_channel_type"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="单位名称"/>
+
+                    <EditText
+                        android:id="@+id/jobinformation_company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_industry_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="单位行业"
+                        android:textColor="@color/name"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobinformation_company_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/industry"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/education_type"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/industry_type"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="单位固话"
+                        android:textColor="@color/name"/>
+
+                    <EditText
+                        android:id="@+id/company_districtNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="区号"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="6dp"
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_dash"/>
+
+                    <EditText
+                        android:id="@+id/jobinformation_company_phonenum"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="固话号码"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="5dp"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_company_address_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="单位地址"
+                        android:textColor="@color/name"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobinformation_company_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/company_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/education_type"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/company_address_type"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"/>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="详细地址"
+                        android:textColor="@color/name"
+                        android:visibility="invisible"/>
+
+                    <EditText
+                        android:id="@+id/jobinformation_company_detailed_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:hint="详细地址"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:padding="6dp"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_entrydata_type"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="入职日期"
+                        android:textColor="@color/name"/>
+
+                    <RelativeLayout
+                        android:id="@+id/jobinformation_company_entrydata"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:id="@+id/entrydata"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/education_type"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/entrydata_type"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_department"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/spacestyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:drawableLeft="@drawable/start"
+                        android:text="单位部门"
+                        android:textColor="@color/name"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_company_department"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <EditText
+                            android:id="@+id/ed_department"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/education_type"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:maxLength="15"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_department"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:padding="8dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/icon_forward"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/loan_bg">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="24dp"
+                        android:text="补充更多单位信息可提高审核通过率"
+                        android:textColor="@color/register_hint"
+                        android:textSize="12sp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_suppleunitInfo"
+                        android:layout_width="52dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:src="@drawable/switch_off"/>
+                    />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_supplunit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_nature_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            style="@style/spacepadding16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="单位性质"
+                            android:textColor="@color/name"/>
+
+                        <RelativeLayout
+                            android:id="@+id/jobinformation_company_nature"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <TextView
+                                android:id="@+id/nature"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@+id/education_type"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:textColor="@color/title"
+                                android:textColorHint="#b3b3b3"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:id="@+id/nature_type"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:padding="8dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/icon_forward"/>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/register_line"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_job"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/spacepadding16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="职务"
+                            android:textColor="@color/name"/>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_job"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp">
+
+                            <TextView
+                                android:id="@+id/tv_job"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@+id/education_type"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:textColor="@color/title"
+                                android:textColorHint="#b3b3b3"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:id="@+id/iv_job"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:padding="8dp"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/icon_forward"
+                                android:visibility="visible"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/register_line"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            style="@style/spacepadding16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="其他收入"
+                            android:textColor="@color/name"/>
+
+                        <EditText
+                            android:id="@+id/ed_otherIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:hint="填写该项，可借额度会提升"
+                            android:inputType="text"
+                            android:maxLength="10"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/register_line"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/spacepadding16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="每月最多还款额"
+                            android:textColor="@color/name"/>
+
+                        <EditText
+                            android:id="@+id/ed_max_payment"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:inputType="text"
+                            android:text=""
+                            android:textColor="@color/title"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/register_line"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/loan_bg"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/confirmation_of_information"
+                    android:textColor="@color/register_hint"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

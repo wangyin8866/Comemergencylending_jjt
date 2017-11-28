@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.two.emergencylending.widget.SlidingButtonView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sbv_item"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <ImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/layout_content"
+            android:padding="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_delete"
+            android:visibility="invisible" />
+
+        <include
+            android:id="@+id/layout_content"
+            layout="@layout/activity_messages_center_item" />
+
+    </RelativeLayout>
+
+</com.two.emergencylending.widget.SlidingButtonView>

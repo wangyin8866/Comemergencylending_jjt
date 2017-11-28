@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view_work"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/loan_bg"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/ll_job_unit_profession"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="6"
+                    android:text="职业"
+                    android:textColor="@color/name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请选择职业"
+                    android:inputType="text"
+                    android:text=""
+                    android:textColor="@color/title"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/iv_profession"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_forward" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_no_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_no_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/loan_bg"
+                    android:drawableLeft="@drawable/icon_prompt"
+                    android:drawablePadding="5dp"
+                    android:gravity="center|left"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="5dp"
+                    android:text="若无业,单位信息可不填"
+                    android:textColor="@color/grey"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/ll_job_unit_industry"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="单位行业"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_industry"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="请选择单位行业"
+                        android:inputType="text"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_industry"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/loan_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_job_unit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="单位名称"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ed_uniti_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择单位名称"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_unit_name"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_unit_tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="单位电话"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ed_unit_district_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="区号"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/black" />
+
+                    <EditText
+                        android:id="@+id/ed_unit_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入电话"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/loan_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_job_department"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="部门"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/ed_depaotment"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请输入单位部门"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_depaotment"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_unit_job"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="职位"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_job"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择职位"
+                        android:inputType="text"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_job"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity=""
+                        android:minEms="6"
+                        android:text="税后月收入"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="请输入税后月收入"
+                        android:inputType="text"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_income"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/loan_bg" />
+
+                <LinearLayout
+                    android:id="@+id/ll_unit_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="单位地址"
+                        android:textColor="@color/name"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_unit_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请选择公司所在地"
+                        android:inputType="text"
+                        android:text=""
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_unit_address"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_forward" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="6"
+                        android:text="详细地址"
+                        android:textColor="@color/name"
+                        android:textSize="14sp"
+                        android:visibility="invisible" />
+
+                    <EditText
+                        android:id="@+id/ed_unit_detailed_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="详细地址"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="@color/title"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/register_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_previous"
+                    style="@style/button_orange"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:text="上一步" />
+
+                <Button
+                    android:id="@+id/btn_job_sava"
+                    style="@style/button_orange"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:text="下一步" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

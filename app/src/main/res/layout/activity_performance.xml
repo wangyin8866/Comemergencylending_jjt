@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loan_bg"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@drawable/top_bg" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_bg"
+                android:orientation="vertical">
+
+                <com.two.emergencylending.view.Topbar
+                    android:id="@+id/topbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/title_height"
+                    android:background="@color/transparent"
+                    android:paddingLeft="10dp"
+                    custom:iv_left="@drawable/back"
+                    custom:leftBackground="@drawable/button_bg"
+                    custom:leftTextColor="@color/black"
+                    custom:leftTextSize="@dimen/title_left_size"
+                    custom:mytitle="我的业绩"
+                    custom:mytitleTextColor="@color/main_bg"
+                    custom:mytitleTextSize="@dimen/title_size"
+                    custom:rightBackground="@drawable/button_bg"
+                    custom:rightTextColor="@color/black"
+                    custom:rightTextSize="@dimen/title_right_size" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_weight="1">
+
+                    <com.two.emergencylending.view.progress.DashedCircularProgress
+                        android:id="@+id/circular"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="true"
+                        custom:base_color="@color/white_20"
+                        custom:duration="1500"
+                        custom:external_color="@color/white_20"
+                        custom:max="50"
+                        custom:min="000"
+                        custom:progress_color="@color/white"
+                        custom:progress_stroke_width="96">
+
+                        <TextView
+                            android:id="@+id/tv_loan_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="60dp" />
+
+                    </com.two.emergencylending.view.progress.DashedCircularProgress>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="35dp"
+                        android:gravity="center"
+                        android:text="本月累计放款成功（笔）"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/shape_circle_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/icon_customer"
+                    android:drawablePadding="5dp"
+                    android:text="我的客户"
+                    android:textColor="@color/light_grey"
+                    android:textSize="14dp" />
+
+                <include layout="@layout/line_d" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_direct_customer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-2dp"
+                            android:background="@drawable/customer_bg"
+                            android:gravity="center"
+                            android:text="直接客户"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_direct_customer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:gravity="center"
+                                    android:text="0人"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="未到店"
+                                    android:textColor="@color/super_light_grey"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_direct_customer_no_apply"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:gravity="center"
+                                    android:text="0人"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="未进件"
+                                    android:textColor="@color/super_light_grey"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="35dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/register_line" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_indirect_customer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-2dp"
+                            android:background="@drawable/customer_bg"
+                            android:gravity="center"
+                            android:text="间接客户"
+                            android:textColor="@color/white"
+                            android:textSize="13dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_indirect_customer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:gravity="center"
+                                    android:text="0人"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="未到店"
+                                    android:textColor="@color/super_light_grey"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_indirect_customer_no_apply"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:gravity="center"
+                                    android:text="0人"
+                                    android:textColor="@color/light_grey"
+                                    android:textSize="14dp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:text="未进件"
+                                    android:textColor="@color/super_light_grey"
+                                    android:textSize="12dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_circle_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/icon_notice"
+                    android:drawablePadding="5dp"
+                    android:text="公告专区"
+                    android:textColor="@color/light_grey"
+                    android:textSize="14dp" />
+
+                <include layout="@layout/line_d" />
+
+                <com.two.emergencylending.view.CustomListView
+                    android:id="@+id/lv_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

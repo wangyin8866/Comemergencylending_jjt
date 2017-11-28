@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.two.emergencylending.view.Topbar
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            custom:iv_left="@drawable/back"
+            custom:leftBackground="@drawable/button_bg"
+            custom:leftTextColor="@color/black"
+            custom:leftTextSize="@dimen/title_left_size"
+            custom:mytitle="我的录件"
+            custom:mytitleTextColor="@color/black"
+            custom:mytitleTextSize="@dimen/title_size"
+            custom:rightBackground="@drawable/button_bg"
+            custom:rightTextColor="@color/black"
+            custom:rightTextSize="@dimen/title_right_size" />
+
+        <TextView
+            android:id="@+id/topbar_status"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@drawable/icon_all"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="全部状态"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/line_d" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/et_name_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/input"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_name_phone_remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="请输入您的手机号或者姓名进行筛选"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/reminder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/icon_prompt"
+        android:drawablePadding="5dp"
+        android:text="以下信息为客户申请信息"
+        android:textColor="@color/grey"
+        android:textSize="12dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.two.emergencylending.view.CustomListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+
+                <LinearLayout
+                    android:id="@+id/ll_nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_nodata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/icon_nocustomer" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:text="暂无客户，快来邀请朋友吧" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/line_d" />
+
+</LinearLayout>
